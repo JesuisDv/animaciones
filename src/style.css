@@ -1,0 +1,120 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgba(24, 0, 36, 1);
+}
+
+section{
+  position: relative;
+  text-align: center;
+  height: 200vh;
+  animation-timeline: scroll(y) !important;
+}
+
+section .anim{
+  position: sticky;
+  top: 0%;
+  bottom: 100%;
+  height: 100vh;
+}
+
+section, section .anim, section .anim *{
+ animation-timeline: scroll(y) !important;
+  animation-range-start: var(--range-start) !important;
+  animation-range-end: var(--range-end) !important;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+#animacion1{
+  --range-start: 0px;
+  --range-end: 100vh;
+  background-color: #C2A3D8;
+  color: white;
+  animation: animA1 linear 3s;
+}
+
+@keyframes animA1 {
+  from{
+    background-color: rgba(24, 0, 36, 1);
+  }
+  to{
+    background: rgb(205, 173, 227);
+  }
+}
+
+.cubitos{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.cubito{
+  width: 200px;
+  height: 250px;
+  border-radius: 30px;
+  opacity: .5;
+  background: rgb(155, 111, 230); 
+  animation: cubitos linear 3s;
+}
+
+@keyframes cubitos {
+  from{
+    height: 0;
+    opacity: 1;
+    background-color: rgb(155, 111, 230);
+  }
+  to{
+    height: 200px;
+    opacity: 0.5;
+    background: linear-gradient(0deg,rgba(24, 0, 36, 1) 0%, rgba(74, 9, 121, 1) 35%, rgba(149, 0, 255, 1) 100%);;
+  }
+}
+
+
+/* Section 2 */
+
+#animacion2{
+  --range-start: 100vh;
+  --range-end: 300vh;
+}
+
+.anim2{
+  width: 100%;
+  height: 100vh;
+  background-color: #C2A3D8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation:  reducir linear 3s;
+}
+
+.animdiv2{
+  width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid #9d00ff;
+}
+
+@keyframes reducir{
+    from{
+        width: 100%;
+    }
+
+    50%{
+        width: 50%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
