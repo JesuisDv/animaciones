@@ -25,7 +25,16 @@ document.querySelector("#app").innerHTML =`
       </div>
     </div>
   </section>
-      
+  
+
+  <section id="animacion3">
+    <div class="anim">
+      <div id="caja">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+    </div>
+  </section>
 `;
 
 
